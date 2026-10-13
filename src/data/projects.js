@@ -1,4 +1,5 @@
 const technologies = ['React', 'JavaScript', 'Tailwind CSS', 'Vite'];
+const wordpressTechnologies = ['WordPress', 'PHP', 'HTML', 'CSS', 'JavaScript'];
 
 const projects = [
   {
@@ -17,14 +18,14 @@ const projects = [
   {
     name: 'Nile Gazette',
     description: 'A live news platform covering South Sudan, Africa, and the world, built in collaboration with the Wanii team.',
-    technologies: ['WordPress'],
+    technologies: wordpressTechnologies,
     preview: 'website',
     websiteUrl: 'https://nilegazette.com/',
   },
   {
     name: 'Tony Talks Football',
     description: 'A live football platform developed and deployed in collaboration with the Wanii team.',
-    technologies: ['WordPress'],
+    technologies: wordpressTechnologies,
     preview: 'website',
     websiteUrl: 'https://tonytalksfootball.com/',
   },
