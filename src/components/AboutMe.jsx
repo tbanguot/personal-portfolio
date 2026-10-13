@@ -2,13 +2,13 @@ import profileImage from '../assets/profile.jpeg';
 
 function AboutMe() {
   return (
-    <section id="about" className="scroll-mt-32 rounded-2xl border border-[#d6d9ca] bg-[#f6f5ed] p-4 shadow-md shadow-[#37433e]/6 sm:scroll-mt-24 sm:rounded-3xl sm:p-8 lg:p-10">
+    <section id="about" className="scroll-mt-32 rounded-2xl border border-[#E2E8F0] bg-white p-4 shadow-md shadow-[#0B1220]/6 sm:scroll-mt-24 sm:rounded-3xl sm:p-8 lg:p-10">
       <div className="mb-6">
-        <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[#2f7048]">A little about me</p>
-        <h2 className="text-3xl font-bold tracking-tight text-[#26372d] sm:text-4xl">About Me</h2>
+        <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[#087CFA]">A little about me</p>
+        <h2 className="text-3xl font-bold tracking-tight text-[#062C78] sm:text-4xl">About Me</h2>
       </div>
       <div className="grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_16rem] lg:grid-cols-[minmax(0,1fr)_19rem] lg:gap-12">
-        <div className="max-w-4xl space-y-5 text-[1.0625rem] leading-8 text-[#46564b] sm:text-lg">
+        <div className="max-w-4xl space-y-5 text-[1.0625rem] leading-8 text-[#334155] sm:text-lg">
           <p>
             I’m a software developer who loves learning how things work and turning
             ideas into useful, welcoming experiences. I’m always learning and exploring new technologies, and I’m excited to continue growing as a developer.
@@ -24,7 +24,7 @@ function AboutMe() {
               href="https://www.w3schools.com/"
               target="_blank"
               rel="noreferrer"
-              className="font-semibold text-[#2f7048] underline decoration-[#2f7048]/50 underline-offset-4 transition-colors hover:text-[#1e5034] focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2f7048]"
+              className="font-semibold text-[#087CFA] underline decoration-[#087CFA]/50 underline-offset-4 transition-colors hover:text-[#062C78] focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#087CFA]"
             >
               W3Schools
             </a>{' '}

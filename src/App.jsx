@@ -4,10 +4,10 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen overflow-x-clip bg-[#eeeee6] font-sans text-[#25352c]">
+    <div className="min-h-screen overflow-x-clip bg-[#F8FAFC] font-sans text-[#334155]">
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-60 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#25352c] focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#358052]"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-60 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-[#062C78] focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#087CFA]"
       >
         Skip to content
       </a>
