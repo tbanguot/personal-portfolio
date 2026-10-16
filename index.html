@@ -1,36 +1,64 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth motion-reduce:scroll-auto">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#F8FAFC" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0b0e" media="(prefers-color-scheme: dark)" />
+    <meta name="description" content="Tongol Banguot is a software developer with substantial full-stack experience working with React, Node.js, SQL, PostgreSQL, and WordPress. Explore live projects, experience, and ways to connect." />
+    
+    <!-- Script to prevent theme flash -->
+    <script>
+      (function() {
+        try {
+          const theme = localStorage.getItem('portfolio-theme');
+          const isDark = theme ? theme === 'dark' : true;
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.setAttribute('data-theme', 'light');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Tongol | Software Developer" />
-    <meta property="og:description" content="Building thoughtful digital experiences." />
-    <meta property="og:image" content="/logo.png" />
+    <meta property="og:title" content="Tongol Banguot | Software Developer" />
+    <meta property="og:description" content="Thoughtful interfaces. From idea to deployment. Explore Tongol’s projects and development experience." />
+    <meta property="og:image" content="/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tongol Banguot — Software Developer. React, Node.js, SQL, PostgreSQL, and WordPress." />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tongol Banguot | Software Developer" />
+    <meta name="twitter:description" content="Thoughtful interfaces. From idea to deployment. Explore Tongol’s projects and development experience." />
+    <meta name="twitter:image" content="/social-preview.png" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Tongol Banguot",
-        "jobTitle": "Software Engineer",
-        "description": "Building thoughtful digital experiences."
+        "jobTitle": "Software Developer",
+        "description": "Full-stack software development with React, Node.js, SQL, PostgreSQL, and WordPress.",
+        "sameAs": ["https://github.com/tbanguot", "https://www.linkedin.com/in/tbanguot/"]
       }
     </script>
-    <title>Tongol | Software Developer</title>
+    <title>Tongol Banguot | Software Developer</title>
   </head>
-  <body class="min-h-screen bg-[#F8FAFC] font-sans leading-relaxed text-[#334155] antialiased">
+  <body>
     <div id="root"></div>
+    <noscript>Please enable JavaScript to explore Tongol’s portfolio. You can also reach him at tongolmalual@gmail.com.</noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <rect x="48" y="48" width="1104" height="534" rx="20" fill="none" stroke="#334155"/>
+  <rect x="88" y="91" width="54" height="54" rx="12" fill="#0f766e"/>
+  <text x="115" y="127" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="bold" fill="#ffffff">TB</text>
+  <text x="165" y="125" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#99f6e4" letter-spacing="3">FULL-STACK DEVELOPER</text>
+  <text x="86" y="266" font-family="DejaVu Sans,sans-serif" font-size="80" font-weight="bold" fill="#f8fafc" letter-spacing="-3">Tongol Banguot<tspan fill="#5eead4">.</tspan></text>
+  <text x="90" y="335" font-family="DejaVu Sans,sans-serif" font-size="30" fill="#cbd5e1">Thoughtful interfaces. From idea to deployment.</text>
+  <path d="M90 416H1110" stroke="#334155"/>
+  <text x="90" y="470" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#99f6e4">React · Node.js · SQL · PostgreSQL · WordPress</text>
+  <text x="90" y="515" font-family="DejaVu Sans,sans-serif" font-size="18" fill="#cbd5e1">Selected projects · Development experience · Let’s connect</text>
+</svg>
