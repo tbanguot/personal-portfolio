@@ -25,7 +25,7 @@ function Contact() {
             id="contact-heading"
             eyebrow="05 / Contact"
             title="Let’s build something together."
-            description="I’m currently open to full-stack and software developer roles. Whether you have an open position on your team or a project to discuss, my inbox is open."
+            description="I’m available immediately for full-time software and full-stack developer roles. Whether you have an open position on your team or a project to discuss, my inbox is open."
             className="mb-6!"
           />
 
@@ -46,6 +46,12 @@ function Contact() {
 
           <div className="mt-10 flex flex-wrap items-center gap-6 border-t border-[var(--border-color)] pt-6 text-sm font-mono text-[var(--text-secondary)]">
             <span>Direct: <strong className="text-[var(--text-primary)]">{profile.email}</strong></span>
+            <a
+              href={profile.phoneUrl}
+              className="transition-colors hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4"
+            >
+              {profile.phone}
+            </a>
             <a
               href={profile.linkedinUrl}
               target="_blank"

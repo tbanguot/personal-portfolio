@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import profile from '../../data/profile';
 import navigation from '../../data/navigation';
 import { useTheme } from '../../context/useTheme';
@@ -6,10 +6,33 @@ import Icon from '../ui/Icon';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navbarRef = useRef(null);
   const { isDark, toggleTheme } = useTheme();
 
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const desktopScreen = window.matchMedia('(min-width: 40rem)');
+
+    function handleOutsidePointerDown(event) {
+      if (
+        !desktopScreen.matches &&
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false);
+      }
+    }
+
+    document.addEventListener('pointerdown', handleOutsidePointerDown, true);
+
+    return () => {
+      document.removeEventListener('pointerdown', handleOutsidePointerDown, true);
+    };
+  }, [isMenuOpen]);
+
   return (
-    <header className="sticky top-0 z-40 border-b border-[var(--border-color)] bg-[var(--bg-page)]/85 backdrop-blur-md transition-colors">
+    <header ref={navbarRef} className="sticky top-0 z-40 border-b border-[var(--border-color)] bg-[var(--bg-page)]/85 backdrop-blur-md transition-colors">
       <div className="page-container flex h-16 items-center justify-between">
         {/* Brand */}
         <a

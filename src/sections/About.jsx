@@ -63,10 +63,13 @@ function About() {
               I’m a software developer focused on web applications. I build software across the full stack. I design databases, write backend APIs, and create clean React frontends.
             </p>
             <p>
+              I’ve completed the coursework for my Bachelor of Science in Computer Science at Saint Mary’s University, with graduation scheduled for November 2026.
+            </p>
+            <p>
               My path began in 2020 on an older laptop. Playing with Excel formulas led me to HTML, CSS, and JavaScript. I loved seeing my ideas come to life in the browser.
             </p>
             <p>
-              Today, I collaborate with teams to build and maintain live web platforms. That includes database schema design, REST APIs, and responsive user interfaces. I value clear communication, good tests, and straightforward code that is easy to maintain.
+              At Wanii, I helped deliver three production web platforms serving over 5,000 active monthly users. My work included database schema design and responsive interfaces with React and Tailwind CSS. I value clear communication, good tests, and straightforward code that is easy to maintain.
             </p>
             <p>
               Outside of coding, I spend time with my son and enjoy the outdoors.

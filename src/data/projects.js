@@ -3,7 +3,7 @@ const wordpressTechnologies = ['WordPress', 'PHP', 'HTML', 'CSS', 'JavaScript'];
 const projects = [
   {
     id: 'chiogong-blog',
-    name: 'Chiogong Blog',
+    name: 'Nyanchiew Studio',
     category: 'Full-Stack Web App',
     description:
       'A personal blog and publishing platform. It features clean article layouts, fast page loads, and simple reading.',
@@ -11,7 +11,7 @@ const projects = [
     technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Netlify'],
     githubUrl: 'https://github.com/tbanguot/chiogong-blog',
     image: '/projects/chiogong-blog.png',
-    imageAlt: 'Chiogong Blog homepage showing article layout and publication header',
+    imageAlt: 'Nyanchiew Studio homepage showing article layout and publication header',
     websiteUrl: 'https://nyanchiew-malual.netlify.app/',
     domain: 'nyanchiew-malual.netlify.app',
   },
@@ -20,7 +20,7 @@ const projects = [
     name: 'Tenzies Pro',
     category: 'Interactive React App',
     description:
-      'A fast-paced interactive dice game. Players roll dice to hold matching numbers until all ten match.',
+      'A fast-paced interactive dice game. Players choose their preferred game mode and keep track of their game stats.',
     role: 'Frontend software engineering',
     technologies: ['React', 'JavaScript', 'CSS', 'State Management'],
     githubUrl: 'https://github.com/tbanguot/tenzies-pro',

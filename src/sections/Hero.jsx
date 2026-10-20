@@ -10,7 +10,7 @@ function Hero() {
           {/* Status pill */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--border-color)] bg-[var(--bg-surface)] px-3 py-1 text-xs sm:text-sm font-mono text-[var(--text-secondary)]">
             <span className="size-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Available for software/full-stack developer roles</span>
+            <span>Available immediately for full-time roles</span>
           </div>
 
           <h1 className="text-4xl font-extrabold tracking-tight text-[var(--text-primary)] sm:text-5xl lg:text-6xl">
@@ -19,11 +19,11 @@ function Hero() {
 
           <p className="mt-5 text-lg leading-relaxed text-[var(--text-secondary)] sm:text-xl">
             Hi, I’m <strong className="font-semibold text-[var(--text-primary)]">{profile.name}</strong>.
-            I build complete web applications from relational database architecture with PostgreSQL to responsive user interfaces with React.
+            I build complete web applications, from relational databases to responsive user interfaces with React.
           </p>
 
           <p className="mt-3 text-base sm:text-lg leading-relaxed text-[var(--text-muted)]">
-            I write clean, maintainable code in Python, C++, Java, and JavaScript. Developed and shipped live platforms 
+            I write clean, maintainable code in Python, C++, Java, and JavaScript. I helped develop and ship live platforms
             with the <a
               href={profile.githubUrl}
               target="_blank"

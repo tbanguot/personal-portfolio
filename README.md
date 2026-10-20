@@ -34,7 +34,7 @@ Designed with an original **Obsidian & Electric Cobalt** visual language, concis
 
 ## Overview
 
-This repository houses the source code for the personal portfolio of **Tongol Banguot**, a software developer with substantial full-stack experience spanning relational database architecture (PostgreSQL), server-side APIs, and interactive frontend interfaces (React).
+This repository houses the source code for the personal portfolio of **Tongol Banguot**, a software developer with full-stack experience spanning relational databases, server-side APIs, and interactive frontend interfaces (React).
 
 The application is engineered as a single-page React app emphasizing:
 - **Fast Load Times**: Bundled with Vite and modern ESM transforms for lightning-fast delivery.
@@ -47,7 +47,7 @@ The application is engineered as a single-page React app emphasizing:
 
 - **Obsidian & Cobalt Theme System**: Seamless toggle between deep obsidian dark canvas (`#09090b`) and crisp alabaster light canvas (`#fafafa`) with persistent `localStorage` preference and zero flash of incorrect theme (FOIT).
 - **Sticky Navigation**: Streamlined header with brand monogram, quick section links, theme toggle, and a direct "Let's talk" action. Fully responsive with mobile slide-down menu.
-- **Hero & Status Indicator**: Live availability pill (`Available for software/full-stack developer roles`), high-impact typography, and instant social touchpoints.
+- **Hero & Status Indicator**: Live availability pill (`Available immediately for full-time roles`), high-impact typography, and instant social touchpoints.
 - **Featured Projects Showcase**: Grid cards displaying real project screenshots, live deployment URLs, GitHub repository links, and technology badges.
 - **Structured Capabilities Matrix**: Categorized skill breakdown across Languages, Backend & Frameworks, and Tools & Deployment.
 - **Work Experience Timeline**: Detailed engineering history with highlighted contributions, tech badges, and an interactive disclosure for field and university roles.
@@ -59,7 +59,7 @@ The application is engineered as a single-page React app emphasizing:
 
 | Project | Type | Tech Stack | Links |
 | :--- | :--- | :--- | :--- |
-| **Chiogong Blog** | Full-Stack Web App | React, JavaScript, HTML, CSS, Netlify | [Live Site](https://nyanchiew-malual.netlify.app/) · [GitHub](https://github.com/tbanguot/chiogong-blog) |
+| **Nyanchiew Studio** | Full-Stack Web App | React, JavaScript, HTML, CSS, Netlify | [Live Site](https://nyanchiew-malual.netlify.app/) · [GitHub](https://github.com/tbanguot/chiogong-blog) |
 | **Tenzies Pro** | Interactive React App | React, JavaScript, CSS, State Hooks | [Live Site](https://tenziez-pro.netlify.app/) · [GitHub](https://github.com/tbanguot/tenzies-pro) |
 | **Nile Gazette** | Live News Platform | WordPress, PHP, HTML, CSS, JavaScript | [Live Site](https://nilegazette.com/) |
 | **Tony Talks Football** | Live Sports Platform | WordPress, PHP, JavaScript, CSS | [Live Site](https://tonytalksfootball.com/) |
@@ -75,9 +75,9 @@ The application is engineered as a single-page React app emphasizing:
 - **Linting & Code Quality**: [Oxlint](https://oxc.rs/)
 
 ### Languages & Frameworks
-- **Languages**: Python, C++, Java, JavaScript, TypeScript, SQL, PHP, HTML5/CSS3
-- **Backend & Libraries**: Node.js, PostgreSQL, React, Tailwind CSS, WordPress, REST APIs, Supabase / Firebase
-- **Tools & Deployment**: Git, GitHub, Jira, Vercel, Netlify, Vite, VSCode
+- **Languages**: Python, C++, Java, JavaScript, TypeScript, HTML, CSS
+- **Backend & Libraries**: React, Node.js, MySQL, MongoDB Atlas, Tailwind CSS, Bootstrap, WordPress, REST APIs, Supabase
+- **Tools & Deployment**: Git, GitHub, Linux, JSON, Jira, Vercel, Netlify, Vite, VSCode
 
 ---
 
