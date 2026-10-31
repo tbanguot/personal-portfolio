@@ -4,7 +4,7 @@ import ProjectCard from '../components/projects/ProjectCard';
 
 function Projects() {
   return (
-    <section id="projects" className="section-padding border-b border-[var(--border-color)]">
+    <section id="projects" tabIndex={-1} className="section-padding border-b border-[var(--border-color)]">
       <div className="page-container">
         <SectionHeading
           id="projects-heading"

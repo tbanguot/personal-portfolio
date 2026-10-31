@@ -3,13 +3,17 @@ import { ThemeContext } from './ThemeContext';
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('portfolio-theme') || 'dark';
+    try {
+      const saved = window.localStorage.getItem('portfolio-theme');
+      return ['dark', 'light', 'system'].includes(saved) ? saved : 'dark';
+    } catch {
+      return 'dark';
     }
-    return 'dark';
   });
 
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(() =>
+    theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+  );
 
   useEffect(() => {
     const root = document.documentElement;
@@ -42,9 +46,12 @@ export function ThemeProvider({ children }) {
   }, [theme]);
 
   function handleSetTheme(newTheme) {
+    if (!['dark', 'light', 'system'].includes(newTheme)) return;
     setTheme(newTheme);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('portfolio-theme', newTheme);
+    try {
+      window.localStorage.setItem('portfolio-theme', newTheme);
+    } catch {
+      // Theme changes still work when browser storage is unavailable.
     }
   }
 

@@ -23,9 +23,11 @@
     --border-subtle: #f4f4f5;
     --text-primary: #09090b;
     --text-secondary: #52525b;
-    --text-muted: #71717a;
+    --text-muted: #62626c;
     --accent: #2563eb;
     --accent-hover: #1d4ed8;
+    --button-bg: #2563eb;
+    --button-hover: #1d4ed8;
     --badge-bg: #f4f4f5;
     --badge-text: #27272a;
     --badge-border: #e4e4e7;
@@ -39,9 +41,11 @@
     --border-subtle: #18181b;
     --text-primary: #fafafa;
     --text-secondary: #a1a1aa;
-    --text-muted: #71717a;
-    --accent: #3b82f6;
-    --accent-hover: #60a5fa;
+    --text-muted: #a1a1aa;
+    --accent: #60a5fa;
+    --accent-hover: #93c5fd;
+    --button-bg: #2563eb;
+    --button-hover: #1d4ed8;
     --badge-bg: #18181b;
     --badge-text: #e4e4e7;
     --badge-border: #27272a;

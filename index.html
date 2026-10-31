@@ -12,17 +12,16 @@
     <!-- Script to prevent theme flash -->
     <script>
       (function() {
+        let theme = 'dark';
         try {
-          const theme = localStorage.getItem('portfolio-theme');
-          const isDark = theme ? theme === 'dark' : true;
-          if (isDark) {
-            document.documentElement.classList.add('dark');
-            document.documentElement.setAttribute('data-theme', 'dark');
-          } else {
-            document.documentElement.classList.remove('dark');
-            document.documentElement.setAttribute('data-theme', 'light');
-          }
-        } catch (e) {}
+          const saved = localStorage.getItem('portfolio-theme');
+          if (['dark', 'light', 'system'].includes(saved)) theme = saved;
+        } catch {}
+        const isDark = theme === 'dark' ||
+          (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.classList.toggle('dark', isDark);
+        document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+
       })();
     </script>
 

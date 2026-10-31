@@ -2,7 +2,7 @@ import Icon from './Icon';
 
 const variants = {
   primary:
-    'bg-[var(--accent)] text-white shadow-xs transition-all hover:bg-[var(--accent-hover)] hover:shadow-md hover:scale-[1.02] active:scale-[0.98]',
+    'bg-[var(--button-bg)] text-white shadow-xs transition-all hover:bg-[var(--button-hover)] hover:shadow-md hover:scale-[1.02] active:scale-[0.98]',
   secondary:
     'border border-[var(--border-color)] bg-[var(--bg-surface)] text-[var(--text-primary)] transition-all hover:border-blue-500/60 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-500/5 hover:scale-[1.02] active:scale-[0.98]',
   ghost:

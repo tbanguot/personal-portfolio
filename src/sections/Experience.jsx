@@ -8,7 +8,7 @@ const otherExperience = experience.filter((item) => item.category === 'other');
 
 function Experience() {
   return (
-    <section id="experience" className="section-padding border-b border-[var(--border-color)]">
+    <section id="experience" tabIndex={-1} className="section-padding border-b border-[var(--border-color)]">
       <div className="page-container">
         <SectionHeading
           id="experience-heading"

@@ -4,7 +4,7 @@ import Icon from '../components/ui/Icon';
 
 function Hero() {
   return (
-    <section id="home" className="section-padding border-b border-[var(--border-color)]">
+    <section id="home" tabIndex={-1} className="section-padding border-b border-[var(--border-color)]">
       <div className="page-container">
         <div className="max-w-3xl">
           {/* Status pill */}
@@ -24,13 +24,7 @@ function Hero() {
 
           <p className="mt-3 text-base sm:text-lg leading-relaxed text-[var(--text-muted)]">
             I write clean, maintainable code in Python, C++, Java, and JavaScript. I helped develop and ship live platforms
-            with the <a
-              href={profile.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-blue-600 dark:text-blue-400 underline underline-offset-4 decoration-blue-500/40 transition-all hover:decoration-blue-600 dark:hover:decoration-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
-                 Wanii
-            </a> team.
+            with the Wanii team.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
