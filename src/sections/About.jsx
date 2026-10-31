@@ -6,7 +6,7 @@ import ButtonLink from '../components/ui/ButtonLink';
 
 function About() {
   return (
-    <section id="about" className="section-padding border-b border-[var(--border-color)]">
+    <section id="about" tabIndex={-1} className="section-padding border-b border-[var(--border-color)]">
       <div className="page-container">
         <SectionHeading
           id="about-heading"

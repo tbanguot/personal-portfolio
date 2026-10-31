@@ -78,7 +78,7 @@ function ProjectCard({ project }) {
             rel="noopener noreferrer"
             className="group/link inline-flex items-center gap-1.5 font-semibold text-blue-600 dark:text-blue-400 transition-colors hover:text-blue-700 dark:hover:text-blue-300 hover:underline underline-offset-4"
           >
-            <span>Live site</span>
+            <span>Live site<span className="sr-only"> for {project.name} (opens in a new tab)</span></span>
             <Icon name="arrow-up-right" className="size-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
           </a>
         )}
@@ -90,7 +90,7 @@ function ProjectCard({ project }) {
             className="group/link inline-flex items-center gap-1.5 font-medium text-[var(--text-secondary)] transition-colors hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4"
           >
             <Icon name="github" className="size-3.5 transition-transform group-hover/link:scale-110" />
-            <span>Source code</span>
+            <span>Source code<span className="sr-only"> for {project.name} (opens in a new tab)</span></span>
           </a>
         )}
       </div>

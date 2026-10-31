@@ -2,11 +2,6 @@ import profile from '../../data/profile';
 import Icon from '../ui/Icon';
 
 function Footer() {
-  function scrollToTop(e) {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
   return (
     <footer className="border-t border-[var(--border-color)] py-10 text-xs sm:text-sm font-mono text-[var(--text-muted)]">
       <div className="page-container flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -38,7 +33,6 @@ function Footer() {
           </a>
           <a
             href="#home"
-            onClick={scrollToTop}
             className="group inline-flex items-center gap-1 font-medium text-blue-600 dark:text-blue-400 transition-colors hover:text-blue-700 dark:hover:text-blue-300 hover:underline underline-offset-4"
           >
             <span>Top</span>

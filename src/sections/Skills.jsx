@@ -5,7 +5,7 @@ import Icon from '../components/ui/Icon';
 
 function Skills() {
   return (
-    <section id="skills" className="section-padding border-b border-[var(--border-color)]">
+    <section id="skills" tabIndex={-1} className="section-padding border-b border-[var(--border-color)]">
       <div className="page-container">
         <SectionHeading
           id="skills-heading"

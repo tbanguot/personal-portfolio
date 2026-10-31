@@ -5,22 +5,22 @@ import ButtonLink from '../components/ui/ButtonLink';
 import Icon from '../components/ui/Icon';
 
 function Contact() {
-  const [copyStatus, setCopyStatus] = useState('');
+  const [copyStatus, setCopyStatus] = useState('idle');
 
   async function copyEmail() {
+    setCopyStatus('copying');
     try {
       await navigator.clipboard.writeText(profile.email);
-      setCopyStatus('Copied to clipboard!');
-      setTimeout(() => setCopyStatus(''), 2500);
+      setCopyStatus('success');
     } catch {
-      setCopyStatus('Could not copy automatically');
+      setCopyStatus('error');
     }
   }
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" tabIndex={-1} className="section-padding">
       <div className="page-container">
-        <div className="clean-card p-8 sm:p-12">
+        <div className="clean-card min-w-0 p-5 sm:p-12">
           <SectionHeading
             id="contact-heading"
             eyebrow="05 / Contact"
@@ -37,15 +37,22 @@ function Contact() {
             <button
               type="button"
               onClick={copyEmail}
+              disabled={copyStatus === 'copying'}
               className="inline-flex items-center gap-2 rounded-lg border border-[var(--border-color)] bg-[var(--bg-surface)] px-4 py-2 text-sm font-medium text-[var(--text-primary)] transition-all hover:border-blue-500/60 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-500/5 hover:scale-[1.02] active:scale-[0.98]"
             >
-              <Icon name={copyStatus ? 'check' : 'copy'} className="size-4 text-[var(--accent)]" />
-              <span>{copyStatus || 'Copy email address'}</span>
+              <Icon name={copyStatus === 'success' ? 'check' : copyStatus === 'error' ? 'x' : 'copy'} className="size-4 text-[var(--accent)]" />
+              <span>Copy email address</span>
             </button>
           </div>
 
+          <p role="status" aria-live="polite" aria-atomic="true" className="mt-3 min-h-6 text-sm text-[var(--text-secondary)]">
+            {copyStatus === 'success' && 'Email address copied to clipboard.'}
+            {copyStatus === 'error' && 'Could not copy automatically. Select the email address below to copy it manually, or use Send an email.'}
+            {copyStatus === 'copying' && 'Copying email address…'}
+          </p>
+
           <div className="mt-10 flex flex-wrap items-center gap-6 border-t border-[var(--border-color)] pt-6 text-sm font-mono text-[var(--text-secondary)]">
-            <span>Direct: <strong className="text-[var(--text-primary)]">{profile.email}</strong></span>
+            <span className="min-w-0 [overflow-wrap:anywhere]">Direct: <strong className="text-[var(--text-primary)]">{profile.email}</strong></span>
             <a
               href={profile.phoneUrl}
               className="transition-colors hover:text-blue-600 dark:hover:text-blue-400 hover:underline underline-offset-4"

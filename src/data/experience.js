@@ -21,7 +21,7 @@ const experience = [
     technologies: ['WordPress', 'HTML', 'CSS'],
     highlights: [
       'Increased community program and event engagement by 40% by maintaining and updating organizational web pages.',
-      'Achieved 100% accessibility compliance through modern web accessibility standards and collaborative design updates.',
+      'Contributed accessibility improvements through web standards and collaborative design updates.',
       'Increased digital outreach engagement by 25% through website analytics, monthly engagement reports, and social media campaigns.',
     ],
   },

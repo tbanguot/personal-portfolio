@@ -38,15 +38,15 @@ This repository houses the source code for the personal portfolio of **Tongol Ba
 
 The application is engineered as a single-page React app emphasizing:
 - **Fast Load Times**: Bundled with Vite and modern ESM transforms for lightning-fast delivery.
-- **Accessible Design**: Compliant with WCAG guidelines, semantic HTML5 elements, and keyboard navigation.
-- **Original Aesthetics**: Custom theme tokens with fluid typography, responsive layout, and an instant Dark/Light mode switcher with system preference detection.
+- **Accessible Design**: Semantic HTML5 elements, keyboard navigation, and automated accessibility checks.
+- **Original Aesthetics**: Custom theme tokens with fluid typography, responsive layout, and an instant Dark/Light mode switcher with support for a saved system preference.
 
 ---
 
 ## Key Features
 
-- **Obsidian & Cobalt Theme System**: Seamless toggle between deep obsidian dark canvas (`#09090b`) and crisp alabaster light canvas (`#fafafa`) with persistent `localStorage` preference and zero flash of incorrect theme (FOIT).
-- **Sticky Navigation**: Streamlined header with brand monogram, quick section links, theme toggle, and a direct "Let's talk" action. Fully responsive with mobile slide-down menu.
+- **Obsidian & Cobalt Theme System**: Seamless toggle between deep obsidian dark canvas (`#09090b`) and crisp alabaster light canvas (`#fafafa`) with persistent `localStorage` preference and early theme initialization.
+- **Sticky Navigation**: Streamlined header with the author name, quick section links, theme toggle, and a direct "Let's talk" action. Fully responsive with mobile slide-down menu.
 - **Hero & Status Indicator**: Live availability pill (`Available immediately for full-time roles`), high-impact typography, and instant social touchpoints.
 - **Featured Projects Showcase**: Grid cards displaying real project screenshots, live deployment URLs, GitHub repository links, and technology badges.
 - **Structured Capabilities Matrix**: Categorized skill breakdown across Languages, Backend & Frameworks, and Tools & Deployment.
@@ -129,7 +129,7 @@ portfolio/
 
 ### Prerequisites
 
-Ensure you have **Node.js** (v18 or higher recommended; v20/v22 LTS preferred) and **npm** installed on your system.
+Use **Node.js 22.12 or newer** (Node 22 LTS recommended) and **npm**.
 
 ```sh
 node --version
@@ -140,8 +140,8 @@ npm --version
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/tbanguot/portfolio.git
-   cd portfolio
+   git clone https://github.com/tbanguot/personal-portfolio.git
+   cd personal-portfolio
    ```
 
 2. **Install project dependencies:**
@@ -164,8 +164,10 @@ Open your browser and navigate to `http://localhost:5173`.
 Create an optimized, minified production build:
 
 ```sh
-npm run build
+VITE_SITE_URL=https://your-production-domain.example npm run build
 ```
+
+Replace the example URL with your actual production origin. `VITE_SITE_URL` is required for production metadata; Netlify’s `URL` is used as a fallback. Builds fail clearly if neither is available. Development (`npm run dev`) does not require it.
 
 The compiled assets will be output to the `dist/` directory.
 
@@ -190,7 +192,7 @@ npm run preview
 
 ## Accessibility & Performance
 
-- **WCAG Compliant Contrast**: Carefully tuned color palettes in both light and dark modes to satisfy WCAG AA/AAA contrast ratios.
+- **Contrast**: Text and button colors target WCAG AA normal-text contrast in both themes; automated checks supplement manual review.
 - **Skip Link**: Includes an accessible `#main-content` skip link for keyboard users.
 - **Semantic Structure**: Meaningful HTML5 tags (`<header>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<figure>`).
 - **Focus Rings**: High-contrast, custom `:focus-visible` outlines for accessible tab navigation.
@@ -200,6 +202,18 @@ npm run preview
 ---
 
 ## Deployment
+
+### Launch checks
+
+```sh
+npm run lint
+npx playwright install chromium
+npm run test:e2e
+```
+
+Browser checks cover narrow layouts, both themes, navigation, clipboard feedback, blocked storage, reduced motion, contrast, and generated SEO metadata. GitHub Actions runs lint, build, and these checks on pushes and pull requests. CI uses a reserved example origin only for testing; configure your real production URL in hosting settings.
+
+Before launch, verify project links on the deployed site, screen-reader behavior, availability/graduation wording, and the analytics behind historical user and engagement metrics. Automated checks do not establish full accessibility conformance.
 
 The application is pre-configured for automated continuous deployment with **Netlify**.
 
